@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>artive.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      margin: 3; 
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'NanumSquareRoundB', sans-serif;
+      background-color: #f6ffff;
+      color: black;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.6rem 1rem;
+      background: #e6fcfc;
+      color: #000;
+    }
+
+    nav {
+      display: flex;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      background: linear-gradient(135deg, #ffffff,#edfbfb,#e6fcfc);
+      padding: 10rem 6rem;
+      color: black;
+    }
+
+    .hero h1 {
+      font-size: 5rem;
+    }
+
+    .hero p {
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+
+    
+    .love {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .love h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .project {
+      background: #fff;
+      border-radius: 30px;
+      padding: 2rem;
+      box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-10px);
+    }
+
+    footer {
+      background: #e6fcfc;
+      color: #000000;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+
+ 
+
+    
+    .floating-buttons {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      z-index: 999;
+    }
+
+    .circle-btn {
+      width: 60px;
+      height: 60px;
+      background-color: #bef5f5;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .circle-btn:hover {
+      background-color: #444;
+      color: white;
+    }
+
+    
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+    }
+
+    .modal-content input,
+    .modal-content textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .modal-content input[type="submit"] {
+      background: #e6fcfc;
+      border: none;
+      cursor: pointer;
+    }
+
+    .close-btn {
+      float: right;
+      font-size: 20px;
+      color: red;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="top"></div>
+
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="logo.png" width="110"></a>
+    </div>
+    <nav>
+      <a href="#about">소개</a>
+      <a href="#love">I love...</a>
+      <a href="연락.html">contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="about">
+    <img src="logo.png" width="500">
+    <h1>"Pick a Color, Unlock a Painting"</h1>
+    <h2>아름다운 작품들을 감상해보세요</h2>
+    <pre>   </pre>
+    <h3>작품은 계속 추가됩니다...</h3>
+  </section>
+
+  <section class="love" id="love">
+    <h2>I love what...?</h2>
+    <div class="projects">
+      <a href="red.html">
+        <div class="project">
+          <h3>RED</h3>
+          <img src="red.png" width="270">
+        </div>
+      </a>
+
+      <a href="orange.html">
+        <div class="project">
+          <h3>ORANGE</h3>
+          <img src="orange.png" width="270">
+        </div>
+      </a>
+
+      <a href="yellow.html">
+        <div class="project">
+          <h3>YELLOW</h3>
+          <img src="yellow.png" width="270">
+        </div>
+      </a>
+
+      <a href="green.html">
+        <div class="project">
+          <h3>GREEN</h3>
+          <img src="green.png" width="270">
+        </div>
+      </a>
+
+      <a href="blue.html">
+        <div class="project">
+          <h3>BLUE</h3>
+          <img src="blue.png" width="270">
+        </div>
+      </a>
+
+      <a href="purple.html">
+        <div class="project">
+          <h3>PURPLE</h3>
+          <img src="purple.png" width="270">
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <a href="https://www.instagram.com/heo_bn/" target="_blank">인스타</a> / 이메일:bonu0228@naver.com
+  </footer>
+
+  
+  <div class="floating-buttons">
+    <a href="upload.html" class="circle-btn" title="업로드 페이지">📷</a>
+    <a href="#top" class="circle-btn" title="맨 위로">↑</a>
+  </div>
+
+  
+  <div class="modal" id="upload">
+    <div class="modal-content">
+      <span class="close-btn" onclick="document.getElementById('upload').style.display='none'">X</span>
+      <form>
+        <input type="text" placeholder="작품 제목">
+        <textarea placeholder="작품 설명"></textarea>
+        <input type="file" accept="image/*">
+        <input type="submit" value="올리기">
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

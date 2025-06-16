@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>I love orange</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f6cca8;
+      color: #333;
+    }
+
+    header {
+      background-color: #f6b984;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      padding: 2rem;
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+
+    .artwork {
+      background-color: #ffeedf;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .artwork img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .info {
+      padding: 1rem;
+    }
+
+    .home-button {
+      display: block;
+      width: 200px;
+      margin: 2rem auto;
+      padding: 0.75rem;
+      background-color: #f6a258;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .modal-toggle {
+      display: none;
+    }
+
+    .modal-box {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modal-toggle:checked + .modal-box {
+      display: flex;
+    }
+
+    .modal-content {
+      background: #ffeedf;
+      padding: 1rem;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .modal-content img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .close-label {
+      margin-top: 1rem;
+      display: inline-block;
+      background-color: #f6a258;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="logo.png" width="110"></a>
+    </div>
+  </header>
+
+  <div style="text-align: center; margin: 50px;">
+    <img src="orange.png" width="200">
+  </div>
+
+  <main class="gallery">
+    <label for="modal1" class="artwork">
+      <img src="orange.jpg" alt="작품 1">
+      <div class="info">
+        <h3>Apples and Oranges</h3>
+      <p>Paul Cézanne </p>
+      </div>
+    </label>
+
+    <label for="modal2" class="artwork">
+      <img src="orange2.jpg" alt="작품 2">
+      <div class="info">
+        <h3>Still Life with Basket and Six Oranges</h3>
+        <p>Vincent van Gogh</p>
+      </div>
+    </label>
+
+    <label for="modal3" class="artwork">
+      <img src="orange3.jpg" alt="작품 3">
+      <div class="info">
+        <h3>Orange and Yellow</h3>
+        <p>Mark Rothko</p>
+      </div>
+    </label>
+
+    <label for="modal4" class="artwork">
+      <img src="orange4.jpg" alt="작품 4">
+      <div class="info">
+        <h3>Sunset Corner</h3>
+        <p>Helen Frankenthaler</p>
+      </div>
+    </label>
+
+    <label for="modal5" class="artwork">
+      <img src="orange5.jpg" alt="작품 5">
+      <div class="info">
+        <h3>The Mulberry Tree</h3>
+        <p>Vincent van Gogh</p>
+      </div>
+    </label>
+
+    <label for="modal6" class="artwork">
+      <img src="orange6.jpg" alt="작품 6">
+      <div class="info">
+        <h3>Four Mandarin Oranges</h3>
+      <p>Édouard Manet</p>
+      </div>
+    </label>
+  </main>
+
+  <a class="home-button" href="index.html">🏠 홈으로 돌아가기</a>
+
+  
+  <input type="checkbox" id="modal1" class="modal-toggle" />
+  <div class="modal-box">
+    <div class="modal-content">
+      <img src="orange.jpg" alt="작품 1 확대">
+      <h3>Apples and Oranges</h3>
+      <p>Paul Cézanne </p>
+      <label for="modal1" class="close-label">닫기</label>
+    </div>
+  </div>
+
+  <input type="checkbox" id="modal2" class="modal-toggle" />
+  <div class="modal-box">
+    <div class="modal-content">
+      <img src="orange2.jpg" alt="작품 2 확대">
+      <h3>Still Life with Basket and Six Oranges</h3>
+        <p>Vincent van Gogh</p>
+      <label for="modal2" class="close-label">닫기</label>
+    </div>
+  </div>
+
+  <input type="checkbox" id="modal3" class="modal-toggle" />
+  <div class="modal-box">
+    <div class="modal-content">
+      <img src="orange3.jpg" alt="작품 3 확대">
+      <h3>Orange and Yellow</h3>
+        <p>Mark Rothko</p>
+      <label for="modal3" class="close-label">닫기</label>
+    </div>
+  </div>
+
+  <input type="checkbox" id="modal4" class="modal-toggle" />
+  <div class="modal-box">
+    <div class="modal-content">
+      <img src="orange4.jpg" alt="작품 4 확대">
+      <h3>Sunset Corner</h3>
+        <p>Helen Frankenthaler</p>
+      <label for="modal4" class="close-label">닫기</label>
+    </div>
+  </div>
+
+  <input type="checkbox" id="modal5" class="modal-toggle" />
+  <div class="modal-box">
+    <div class="modal-content">
+      <img src="orange5.jpg" alt="작품 5 확대">
+      <h3>The Mulberry Tree</h3>
+      <p>Vincent van Gogh</p>
+      <label for="modal5" class="close-label">닫기</label>
+    </div>
+  </div>
+
+  <input type="checkbox" id="modal6" class="modal-toggle" />
+  <div class="modal-box">
+    <div class="modal-content">
+      <img src="orange6.jpg" alt="작품 6 확대">
+      <h3>Four Mandarin Oranges</h3>
+      <p>Édouard Manet</p>
+      <label for="modal6" class="close-label">닫기</label>
+    </div>
+  </div>
+
+</body>
+</html>
